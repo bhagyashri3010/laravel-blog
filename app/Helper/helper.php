@@ -1,0 +1,18 @@
+<?php 
+// use Image;
+function saveImage($file,$path){
+    // dd($path.'medium_img');
+	$randonName = rand(1, 200);
+	$extension = File::extension($file->getClientOriginalName());
+
+	$img = Image::make($file->getRealPath());
+	$filename = time().'_'.$randonName.'.'.$extension;
+
+	// $path = public_path().'/events/'.'sparkicon';
+	if(!File::isDirectory($path)){
+		File::makeDirectory($path, 0777, true, true);
+	}
+	$img->save($path.$filename);
+    return($filename);
+}
+
