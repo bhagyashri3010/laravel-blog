@@ -114,16 +114,6 @@ $(document).ready(function() {
 </script>
 
  <script>
-		//CKEDITOR.config.extraPlugins = 'justify';
-		// CKEDITOR.config.extraPlugins = 'justify,font';
-		// $('.description').ckeditor();
-		CKEDITOR.replace('description',{
-			height:400,
-			//filebrowserUploadUrl:"{{ url('control/upload') }}"
-		});
-		CKEDITOR.replace('short_content',{
-			height:150,
-		});
-		// $('.textarea').ckeditor(); // if class is prefered.
+		$('textarea').ckeditor();
 	</script>
 @endsection
