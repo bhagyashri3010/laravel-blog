@@ -7,12 +7,12 @@
 		<div class="container-fluid">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<h1>General Form</h1>
+					<h1>Edit Category</h1>
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item active">General Form</li>
+						<li class="breadcrumb-item active">Edit Category</li>
 					</ol>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 						</div>
 						<!-- /.card-header -->
 						<!-- form start -->
-						<form role="form" action="{{ route('categories.update', ['category' => $category['id']]) }}" method="POST">
+						<form role="form" id="edit-category-form" action="{{ route('categories.update', ['category' => $category['id']]) }}" method="POST">
 							{{ csrf_field() }}
 							<input type="hidden" name="_method" value="PUT">
 							<div class="card-body">
@@ -54,7 +54,7 @@
 							<!-- /.card-body -->
 
 							<div class="card-footer">
-								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="button" class="btn btn-primary submit-edit-category-form">Submit</button>
 							</div>
 						</form>
 					</div>
@@ -66,4 +66,27 @@
 	</section>
 </div>
 <!-- /.content -->
+@endsection
+
+@section('additional_js')
+<script>
+	$(document).ready(function(){
+		$('#edit-category-form').validate({
+			debug: true,
+			errorClass: 'form-error',
+			rules: {
+				name: "required",
+			},
+			message: {
+				name: "Please enter name",
+			}
+		});
+
+		$(document).on('click', ".submit-edit-category-form", function(event) {
+			if($("#edit-category-form").valid()) {
+				$("#edit-category-form")[0].submit();
+			}
+		});
+	});
+</script>
 @endsection

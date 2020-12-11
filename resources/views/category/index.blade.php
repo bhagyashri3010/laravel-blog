@@ -8,12 +8,12 @@
 			<div class="container-fluid">
 				<div class="row mb-2">
 					<div class="col-sm-6">
-						<h1>Simple Tables</h1>
+						<h1>Categories</h1>
 					</div>
 					<div class="col-sm-6">
 						<ol class="breadcrumb float-sm-right">
 							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item active">Simple Tables</li>
+							<li class="breadcrumb-item active">Categories</li>
 						</ol>
 					</div>
 				</div>
@@ -29,10 +29,10 @@
 							<div class="card-header">
 								<h3 class="card-title">Category Listing</h3>
 								<span>
-									<a href="#multiple_delete" class="btn-danger create-btn" id ="multiple_delete_button">Delete</a>
+									<a href="#multiple_delete" class="btn-danger create-btn btn-sm" id ="multiple_delete_button">Delete</a>
 								</span>
 								<span>
-									<a href="{{ route('categories.create') }}" class="btn-primary create-btn" style="margin-right: 2%;">Create</a>
+									<a href="{{ route('categories.create') }}" class="btn-primary create-btn btn-sm" style="margin-right: 2%;">Create</a>
 								</span>
 							</div>
 							<!-- /.card-header -->

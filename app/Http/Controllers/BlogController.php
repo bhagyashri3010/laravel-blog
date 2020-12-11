@@ -18,15 +18,14 @@ class BlogController extends Controller
 
 	public function index()
 	{
-		$blog_data = Blog::with('category')->get()->toArray();
-	//dd($blog_data[0]['category']['name']);
+		$blog_data = Blog::with('category')->orderBy('id','desc')->get()->toArray();
 		return view('blogs.index', ['blog_data' => $blog_data]);
 	}
 
 	public function blog_data()
 	{
 		// Databale for Blog
-		$Blogs = Blog::with('category')->get()->toArray();
+		$Blogs = Blog::with('category')->orderBy('id','desc')->get()->toArray();
 		return Datatables::of($Blogs)
 		// ->addIndexColumn()
 		->addColumn('check', function($row){

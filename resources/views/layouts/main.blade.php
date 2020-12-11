@@ -2,9 +2,9 @@
 <body>
 
 <div class="wrapper">
-	<div>
-	<a href="{{ url('user_logout') }}" style="float: right; color: red">Logout</a>
-</div>
+	<!-- <div>
+		<a href="{{ url('user_logout') }}" style="float: right; color: red">Logout</a>
+	</div> -->
 @include('layouts.sidebar')
 @yield('content')
 </div>

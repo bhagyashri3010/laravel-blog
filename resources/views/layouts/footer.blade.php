@@ -37,5 +37,7 @@
 	<script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
 	<!-- AdminLTE for demo purposes -->
 	<!-- <script src="{{asset('dist/js/demo.js')}}"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 	@yield('additional_js')
 </html>

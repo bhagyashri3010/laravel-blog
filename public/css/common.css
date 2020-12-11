@@ -2,3 +2,9 @@
 	float: right;
 	padding: 5px;
 }
+
+.form-error {
+	color: red;
+	font-size: 12px;
+	font-weight: normal;
+}

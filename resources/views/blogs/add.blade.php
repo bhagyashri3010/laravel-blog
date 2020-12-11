@@ -7,12 +7,12 @@
 		<div class="container-fluid">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<h1>General Form</h1>
+					<h1>Add Blog</h1>
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item active">General Form</li>
+						<li class="breadcrumb-item active">Add Blog</li>
 					</ol>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 						</div>
 						<!-- /.card-header -->
 						<!-- form start -->
-						<form role="form" action="{{ url('add-blog') }}" method="post" enctype="multipart/form-data">
+						<form id="add-blog-form" role="form" action="{{ url('add-blog') }}" method="post" enctype="multipart/form-data">
 							{{ csrf_field() }}
 							<div class="card-body">
 								<div class="row">
@@ -63,7 +63,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-12">
-										<label>Description</label>
+										<label>Description</label><span class="text-danger"> *</span>
 										<textarea id="description" name="description" class="form-control"></textarea>
 										@if($errors->has('description')) <p style="color: red">{{ $errors->first('description') }}</p> @endif
 									</div>
@@ -71,7 +71,7 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>Image</label>
+											<label>Image</label><span class="text-danger"> *</span>
 											<div class="custom-file">
 												<input type="file" name="image" class="custom-file-input">
 												<label class="custom-file-label">Choose file</label>
@@ -91,7 +91,7 @@
 							<!-- /.card-body -->
 
 							<div class="card-footer">
-								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="button" class="submit-add-blog-form btn btn-primary">Submit</button>
 							</div>
 						</form>
 					</div>
@@ -109,7 +109,44 @@
 <script>
 $(document).ready(function() {
 	//Initialize Select2 Elements
-	$('.select2').select2()
+	$('.select2').select2();
+
+	$('#add-blog-form').validate({
+		ignore: [],
+		debug: true,
+		errorClass: 'form-error',
+		rules: {
+			title: "required",
+			category_id: "required",
+			description: {
+				required: function()
+				{
+					CKEDITOR.instances.description.updateElement();
+				}
+			},
+			image: {
+				required: true,
+				extension: "jpeg|png|jpg|gif|svg"
+			},
+			is_published: "required"
+		},
+		messages: {
+			title: "Please enter title",
+			category_id: "Please select category",
+			description: "Please enter description",
+			image: {
+				required: "Please select image",
+				extension: "Only jpeg,png,jpg,gif,svg files allowed"
+			}
+		},
+	});
+
+	$(document).on('click', ".submit-add-blog-form", function(event) {
+		if($("#add-blog-form").valid()) {
+			console.log('test');
+			$("#add-blog-form")[0].submit();
+		}
+	});
 });
 </script>
 
