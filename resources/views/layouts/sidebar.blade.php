@@ -71,7 +71,7 @@
 </style>
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 	<!-- Right navbar links -->
-	
+
 	<ul class="navbar-nav ml-auto">
 	    <li class="dropdown">
 	    <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" aria-expanded="true">
@@ -105,7 +105,7 @@
 	<div class="sidebar">
 	  <!-- Sidebar user panel (optional) -->
 		<div class="user-panel mt-3 pb-3 mb-3 d-flex">
-			
+
 		</div>
 
 		<!-- Sidebar Menu -->
@@ -129,6 +129,12 @@
 					<a href="{{ route('categories.index') }}" class="nav-link active">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 						<p>Categories</p>
+					</a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+					<a href="{{ route('about.index') }}" class="nav-link active">
+					<i class="nav-icon fas fa-tachometer-alt"></i>
+						<p>About Us</p>
 					</a>
 				</li>
 			</ul>
