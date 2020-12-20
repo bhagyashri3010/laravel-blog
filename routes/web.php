@@ -36,13 +36,16 @@ Route::post('publish/change','BlogController@change_publish');
 Route::get('blog_data', 'BlogController@blog_data');
 
 //cms
-Route::get('about_us','CmsController@aboutus');
+Route::get('about_us','CmsController@about_us')->name('about-index');
+Route::post('add-about_us','CmsController@addaboutus');
 
 //category
 Route::post('multi-delete-category','CategoryController@multi_category_delete')->name('multi-category-delete');
 Route::resource('categories','CategoryController');
 Route::get('category_data', 'CategoryController@category_data');
 });
-Auth::routes();
 
+
+Auth::routes();
+Route::get('/index', 'FrontendController@index');
 Route::get('/home', 'HomeController@index')->name('home');

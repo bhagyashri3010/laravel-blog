@@ -143,7 +143,6 @@ $(document).ready(function() {
 
 	$(document).on('click', ".submit-add-blog-form", function(event) {
 		if($("#add-blog-form").valid()) {
-			console.log('test');
 			$("#add-blog-form")[0].submit();
 		}
 	});

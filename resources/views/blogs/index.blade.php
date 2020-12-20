@@ -144,7 +144,17 @@ $(document).ready(function() {
 		{ "data": "created_at" },
 		{ "data": "publish" },
 		{data: 'action', name: 'action', orderable: false, searchable: false},
-		]
+		],
+		'columnDefs': [
+			{
+				"targets": 0,
+				"className": "text-center",
+			},
+			{
+				"targets": 4,
+				"className": "text-center",
+			}
+		],
 	});
 
 	$(document).on('click',".delete_single",function(event){

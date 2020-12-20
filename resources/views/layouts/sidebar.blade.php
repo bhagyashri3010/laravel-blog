@@ -104,36 +104,33 @@
 	<!-- Sidebar -->
 	<div class="sidebar">
 	  <!-- Sidebar user panel (optional) -->
-		<div class="user-panel mt-3 pb-3 mb-3 d-flex">
-
-		</div>
 
 		<!-- Sidebar Menu -->
 		<nav class="mt-2">
 			<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 			  <!-- Add icons to the links using the .nav-icon class
-				   with font-awesome or any other icon font library -->
+                   with font-awesome or any other icon font library -->
 				<li class="nav-item has-treeview menu-open">
-					<a href="#" class="nav-link active">
+					<a href="#" class="nav-link  ">
 						<i class="fa fa-home"></i>
 						<p>Dashboard</p>
 					</a>
 				</li>
 				<li class="nav-item has-treeview menu-open">
-					<a href="{{ url('blogs') }}" class="nav-link active">
+					<a href="{{ url('blogs') }}" class="nav-link {{ Request::path() == "blogs" ? 'active':''}}">
 						<i class="fa fa-clipboard"></i>
 						<p>Blogs</p>
 					</a>
 				</li>
 				<li class="nav-item has-treeview menu-open">
-					<a href="{{ route('categories.index') }}" class="nav-link active">
-					<i class="nav-icon fas fa-tachometer-alt"></i>
+					<a href="{{ route('categories.index') }}" class="nav-link {{ Request::path() == "categories" ? 'active':''}}">
+					<i class="fa fa-list"></i>
 						<p>Categories</p>
 					</a>
                 </li>
                 <li class="nav-item has-treeview menu-open">
-					<a href="{{ route('about.index') }}" class="nav-link active">
-					<i class="nav-icon fas fa-tachometer-alt"></i>
+					<a href="{{ route('about-index') }}" class="nav-link {{ Request::path() == "about_us" ? 'active':''}}">
+					<i class="fa fa-history"></i>
 						<p>About Us</p>
 					</a>
 				</li>

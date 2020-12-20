@@ -18,7 +18,7 @@ class BlogController extends Controller
 
 	public function index()
 	{
-		$blog_data = Blog::with('category')->orderBy('id','desc')->get()->toArray();
+        $blog_data = Blog::with('category')->orderBy('id','desc')->get()->toArray();
 		return view('blogs.index', ['blog_data' => $blog_data]);
 	}
 
@@ -38,11 +38,11 @@ class BlogController extends Controller
 		->addColumn('publish', function($row){
 			if ($row['is_published'] == 1) {
 				$btn = "<a href='javascript:void(0)' id='blog-publish' data-id=".$row['id'] ."
-					data-publish=0> Publish </a>";
+					data-publish=0> <i class='fa fa-check'></i> </a>";
 			}
 			else{
 				$btn = "<a href='javascript:void(0)' id='blog-publish' data-id=".$row['id'] ."
-					data-publish=1> Un Publish </a>";
+					data-publish=1> <i class='fa fa-times'></i> </a>";
 			}
 			return $btn;
 		})

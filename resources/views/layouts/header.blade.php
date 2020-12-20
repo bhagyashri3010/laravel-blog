@@ -34,16 +34,4 @@
 	<link rel="stylesheet" href="{{asset('plugins/datatables/jquery.dataTables.min.css')}}">
 	<link rel="stylesheet" href="{{ asset('css/common.css') }}">
 
-	<style>
-		.select2-container--default .select2-selection--single {
-			height: calc(2.25rem + 2px) !important;
-		}
-		.modal-content {
-		  margin: auto;
-		  display: block;
-		  width: 80%;
-		  max-width: 700px;
-		}
-
-	</style>
 </head>
