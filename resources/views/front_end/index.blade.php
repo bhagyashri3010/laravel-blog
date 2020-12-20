@@ -7,7 +7,7 @@
         <!-- common navbar -->
         <div class="container">
             <a href="#" class="navbar-brand scroll-top">
-                <img src="file:///C:/Users/Neosoft/Downloads/test.jpg" width="150" style="margin: auto;">
+                <img src="{{asset('images/rct.jpeg')}}" width="150" style="margin: auto;">
             </a>
             <nav class="navbar navbar-inverse" role="navigation">
                 <div class="navbar-header">
