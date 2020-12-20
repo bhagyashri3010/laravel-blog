@@ -70,12 +70,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                {{-- <div class="row">
                                     @foreach($blogs as $blog)
                                         <div class="col-md-12">
                                             <div class="blog-post">
                                                 <div class="col-md-6">
-                                                    <img src="{{asset('front/img/blog_post_01.jpg')}}" style="width: 100%;" alt="">
+                                                    <img src="{{asset('uploads/blog_image/medium_img/'.$blog->image)}}" style="" alt="">
                                                     <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
                                                         26 <br> Oct</div>
                                                 </div>
@@ -90,6 +90,45 @@
                                             </div>
                                         </div>
                                     @endforeach
+                                </div> --}}
+                                <div class="row">
+                                    @foreach($blogs as $blog)
+                                    <div class="col-md-12">
+                                        <div class="blog-post">
+                                            <div class="col-md-6">
+                                                <img src="{{asset('uploads/blog_image/medium_img/'.$blog->image)}}" style="width: 100%;" alt="">
+                                                <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
+                                                    26 <br> Oct</div>
+                                            </div>
+                                            <div class="right-content" style="background-color: #FDE8E4;">
+                                                <h4>{{$blog->title}}</h4>
+                                                <span>Branding / Admin</span>
+                                                 {!! $blog->description !!}
+                                                {{-- <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p> --}}
+                                                <div class="text-button">
+                                                    <a href="#">Continue Reading</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                    {{-- <div class="col-md-12">
+                                        <div class="blog-post">
+                                            <div class="col-md-6">
+                                                <img src="{{asset('front/img/blog_post_01.jpg')}}" style="width: 100%;" alt="">
+                                                <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
+                                                    26 <br> Oct</div>
+                                            </div>
+                                            <div class="right-content" style="background-color: #FDE8E4;">
+                                                <h4>Stumptown Tofu Schlitz</h4>
+                                                <span>Branding / Admin</span>
+                                                <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
+                                                <div class="text-button">
+                                                    <a href="#">Continue Reading</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </section>
@@ -176,7 +215,7 @@
                                         <div class="col-md-12" style="padding: 0;">
                                             <div class="blog-post" style="width: 100%;">
                                                 <div class="col-md-6">
-                                                    <img src="{{asset('front/img/blog_post_01.jpg')}}" style="width: 100%;" alt="">
+                                                    <img src="{{asset('uploads/blog_image/medium_img/'.$blog->image)}}" style="width: 100%;" alt="">
                                                     <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
                                                         26 <br> Oct</div>
                                                 </div>
