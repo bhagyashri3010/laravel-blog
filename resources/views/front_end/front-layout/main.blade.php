@@ -1,5 +1,5 @@
 @include('front_end.front-layout.header')
-
+@include('front_end.navbar.blade')
 <body>
 
 <div class="wrapper">

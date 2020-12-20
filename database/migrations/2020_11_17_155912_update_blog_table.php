@@ -14,7 +14,8 @@ class UpdateBlogTable extends Migration
     public function up()
     {
         Schema::table('blogs', function (Blueprint $table) {
-            $table->integer('category_id')->after('description');
+            //$table->integer('category_id')->after('description')->nullable();
+            $table->integer('category_id')->nullable()->change();
         });
     }
 

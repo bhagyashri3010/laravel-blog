@@ -48,7 +48,7 @@
 											@if ($errors->has('title')) <p style="color:red;">{{ $errors->first('title') }}</p> @endif
 										</div>
 									</div>
-									<div class="col-sm-6">
+									<!-- <div class="col-sm-6">
 										<div class="form-group">
 											<label>Category</label><span class="text-danger"> *</span>
 											<select name="category_id" class="form-control select2" style="width: 100%;">
@@ -59,7 +59,7 @@
 											</select>
 											@if($errors->has('category_id')) <p style="color: red">{{  $errors->first('category_id') }}</p> @endif
 										</div>
-									</div>
+									</div> -->
 								</div>
 								<div class="row">
 									<div class="col-md-12">
@@ -73,8 +73,9 @@
 										<div class="form-group">
 											<label>Image</label><span class="text-danger"> *</span>
 											<div class="custom-file">
-												<input type="file" name="image" class="custom-file-input">
-												<label class="custom-file-label">Choose file</label>
+												<input type="file" name="image" class="custom-file-input" id="inputGroupFile">
+												<label class="custom-file-label" for="exampleInputFile">
+												Select file... </label>
 												@if($errors->has('image')) <p style="color: red">{{ $errors->first('image') }}</p> @endif
 											</div>
 										</div>
@@ -108,6 +109,8 @@
 @section('additional_js')
 <script>
 $(document).ready(function() {
+
+	$('textarea').ckeditor();
 	//Initialize Select2 Elements
 	$('.select2').select2();
 
@@ -146,10 +149,11 @@ $(document).ready(function() {
 			$("#add-blog-form")[0].submit();
 		}
 	});
+
+	$('#inputGroupFile').on('change', function(){
+		files = $(this)[0].files;
+		$(".custom-file-label").html(files[0].name);
+	});
 });
 </script>
-
- <script>
-		$('textarea').ckeditor();
-	</script>
 @endsection

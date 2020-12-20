@@ -77,7 +77,7 @@
                                                 <div class="col-md-6">
                                                     <img src="{{asset('front/img/blog_post_01.jpg')}}" style="width: 100%;" alt="">
                                                     <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
-                                                        26 <br> Oct</div>
+                                                        {{ date("d", strtotime($blog->created_at)) }} <br> {{ date("M", strtotime($blog->created_at)) }}</div>
                                                 </div>
                                                 <div class="right-content" style="background-color: #FDE8E4;">
                                                     <h4>{{ $blog->title }}</h4>
@@ -178,7 +178,7 @@
                                                 <div class="col-md-6">
                                                     <img src="{{asset('front/img/blog_post_01.jpg')}}" style="width: 100%;" alt="">
                                                     <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
-                                                        26 <br> Oct</div>
+                                                        {{ date("d", strtotime($blog->created_at)) }} <br> {{ date("M", strtotime($blog->created_at)) }}</div>
                                                 </div>
                                                 <div class="right-content" style="background-color: #FDE8E4;">
                                                     <h4>{{$blog->title}}</h4>

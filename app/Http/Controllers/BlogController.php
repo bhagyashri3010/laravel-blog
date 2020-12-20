@@ -32,9 +32,6 @@ class BlogController extends Controller
 			$btn = '<input type="checkbox" name="multi_delete[]" class="multi_del" data-id ="'.$row["id"].'">';
 			return $btn;
 		})
-		->addColumn('category', function($row){
-			return $row['category']['name'];
-		})
 		->addColumn('publish', function($row){
 			if ($row['is_published'] == 1) {
 				$btn = "<a href='javascript:void(0)' id='blog-publish' data-id=".$row['id'] ."
@@ -66,11 +63,10 @@ class BlogController extends Controller
 	{
 		$this->validate($request, [
 			'title' => 'required',
-			'category_id' => 'required',
 			'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 			'description' => 'required'
 		]);
-		// dd($request->is_published);
+
 		$path = public_path('uploads/blog_image/');
 		$file = $request->file('image');
 		$filename = saveImage($file,$path);
@@ -89,7 +85,6 @@ class BlogController extends Controller
 	public function show_edit($id)
 	{
 		$blog = Blog::find($id);
-	//dd($blog);
 		$categories = Category::all()->toArray();
 		return view('blogs.edit', ['categories' => $categories,'blog'=>$blog]);
 	}
@@ -98,7 +93,6 @@ class BlogController extends Controller
 	{
 		$this->validate($request, [
 			'title' => 'required',
-			'category_id' => 'required',
 			'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
 			'description' => 'required'
 		]);
