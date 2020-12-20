@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<!--
-Victory HTML CSS Template
-https://templatemo.com/tm-507-victory
--->
-        <title>Victory HTML CSS Template</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--
+		Victory HTML CSS Template
+		https://templatemo.com/tm-507-victory
+		-->
+		<title>Victory HTML CSS Template</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         {{-- <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('front/css/bootstrap-theme.min.css')}}">
@@ -24,35 +24,35 @@ https://templatemo.com/tm-507-victory
 
         {{-- <script src="{{asset('front/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script> --}}
 
-        <style>
-            .follow_me {
-                width: 36px;
-                height: 36px;
-                display: inline-block;
-                text-align: center;
-                line-height: 36px!important;
-                background-color: #fff;
-                border-radius: 50%;
-                color: #363e50;
-                transition: all 0.5s;
-                margin: 0px 5px;
-            }
+		<style>
+			.follow_me {
+				width: 36px;
+				height: 36px;
+				display: inline-block;
+				text-align: center;
+				line-height: 36px!important;
+				background-color: #fff;
+				border-radius: 50%;
+				color: #363e50;
+				transition: all 0.5s;
+				margin: 0px 5px;
+			}
 
-            .search-form {
-                width: 100%;
-                /* margin: 0 auto; */
-                margin-top: 1rem;
-            }
+			.search-form {
+				width: 100%;
+				/* margin: 0 auto; */
+				margin-top: 1rem;
+			}
 
-            .search-form input {
-                height: 100%;
-                /* background: transparent; */
-                border: 0;
-                display: block;
-                width: 100%;
-                padding: 1rem;
-                height: 100%;
-                font-size: 12px;
-            }
-        </style>
-    </head>
+			.search-form input {
+				height: 100%;
+				/* background: transparent; */
+				border: 0;
+				display: block;
+				width: 100%;
+				padding: 1rem;
+				height: 100%;
+				font-size: 12px;
+			}
+		</style>
+	</head>

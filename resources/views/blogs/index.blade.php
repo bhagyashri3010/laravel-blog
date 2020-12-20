@@ -42,50 +42,13 @@
 										<tr>
 											<th style="width: 10px"><input type="checkbox" id="checkAll" name=""></th>
 											<th>Title</th>
-											<th>Category</th>
+											<!-- <th>Category</th> -->
 											<th>Created On</th>
 											<th>Publish</th>
 											<th>Action</th>
 										</tr>
 									</thead>
 								</table>
-								<!-- <table id="blog_table" class="table table-bordered">
-									<thead>
-										<tr>
-											<th style="width: 10px"><input type="checkbox" id="checkAll" name=""></th>
-											<th>Title</th>
-											<th>Category</th>
-											<th>Created On</th>
-											<th>Publish</th>
-											<th>Action</th>
-										</tr>
-									</thead>
-									<tbody>
-										@foreach($blog_data as $blog)
-										<tr>
-											<td>
-												<input type="checkbox" name="multi_delete[]" class="multi_del" data-id = "{{ $blog['id']}}">
-											</td>
-											<td>{{ $blog['title'] }}</td>
-											<td>{{ $blog['category']['name'] }}</td>
-											<td>@if($blog['created_at'])
-													{{ date(date('d-m-Y', strtotime($blog['created_at']))) }}
-												@else
-													N.A
-												@endif
-											</td>
-											<td>
-												<a href="javascript:void(0)" id="blog-publish" data-id="{{ $blog['id'] }}"
-												data-publish="{{ $blog['is_published'] == 1 ? 0 : 1 }}">{{ $blog['is_published'] == 1 ? "Publish" : "UnPublish" }}</a>
-											</td>
-											<td>
-												<a href="{{ url('show-blog/'.$blog['id']) }}" class="btn btn-info btn-xs">Edit</a>
-												<a href="#delete_blog_popup" data-toggle="modal" class="btn btn-xs btn-danger delete_single" data-id="{{ $blog['id'] }}">Delete</a>
-											</td>
-										</tr>
-										@endforeach
-									</tbody>
-								</table> -->
 							</div>
 							<form id="del_form" action="/delete-blog" method="POST">
 				 				{{ csrf_field() }}
@@ -96,15 +59,6 @@
 				 				<input id="multi_hidden_del" type="hidden" name="hidden_del" value="">
 				 			</form>
 							<!-- /.card-body -->
-							<!-- <div class="card-footer clearfix">
-								<ul class="pagination pagination-sm m-0 float-right">
-									<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-									<li class="page-item"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-								</ul>
-							</div> -->
 						</div>
 						<!-- /.card -->
 					</div>
@@ -140,7 +94,6 @@ $(document).ready(function() {
 		{ "data": "check" },
 		{ "data": "title" },
 		// { "data": 'DT_RowIndex', name: 'DT_RowIndex',"sClass": "datatables_action"  }, -> for row numbering
-		{ "data": "category" },
 		{ "data": "created_at" },
 		{ "data": "publish" },
 		{data: 'action', name: 'action', orderable: false, searchable: false},
@@ -151,7 +104,7 @@ $(document).ready(function() {
 				"className": "text-center",
 			},
 			{
-				"targets": 4,
+				"targets": 3,
 				"className": "text-center",
 			}
 		],
