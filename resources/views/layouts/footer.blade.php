@@ -1,6 +1,8 @@
     <!-- jQuery -->
+    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{asset('dist/js/backend.js')}}"></script>
-	{{-- <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+
+	{{--
 	<!-- jQuery UI 1.11.4 -->
 	<script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -24,8 +26,8 @@
 	<!-- daterangepicker -->
 	<script src="{{asset('plugins/moment/moment.min.js')}}"></script>
     <script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script> --}}
-    <script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
-    <script src="{{asset('vendor/unisharp/laravel-ckeditor/adapters/jquery.js')}}"></script>
+    <script src="{{asset('public/vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+    <script src="{{asset('public/vendor/unisharp/laravel-ckeditor/adapters/jquery.js')}}"></script>
 	<!-- Tempusdominus Bootstrap 4 -->
 	{{-- <script src="{{asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 	<!-- Summernote -->
