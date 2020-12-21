@@ -21,14 +21,14 @@
                 <!--/.navbar-header-->
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Recipe Index</a></li>
-                        <li><a href="menu.html">Recipes</a></li>
-                        <li><a href="menu.html">Writing</a></li>
-                        <li><a href="menu.html">Lifetyle</a></li>
-                        <li><a href="menu.html">Travel</a></li>
-                        <li><a href="menu.html">About Me</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="javascript:void(0)">Home</a></li>
+                        <li><a href="javascript:void(0)">Recipe Index</a></li>
+                        <li><a href="javascript:void(0)">Recipes</a></li>
+                        <li><a href="javascript:void(0)">Writing</a></li>
+                        <li><a href="javascript:void(0)">Lifetyle</a></li>
+                        <li><a href="javascript:void(0)">Travel</a></li>
+                        <li><a href="javascript:void(0)">About Me</a></li>
+                        <li><a href="javascript:void(0)">Contact</a></li>
                     </ul>
                 </div>
                 <!--/.navbar-collapse-->
