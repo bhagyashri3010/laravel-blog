@@ -7,7 +7,7 @@
 		Victory HTML CSS Template
 		https://templatemo.com/tm-507-victory
 		-->
-		<title>Victory HTML CSS Template</title>
+		<title>RCT</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">

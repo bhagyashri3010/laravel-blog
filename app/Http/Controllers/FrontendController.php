@@ -10,7 +10,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::where('is_published',1)->get();
         return view('front_end.index',['blogs' => $blogs]);
     }
 }

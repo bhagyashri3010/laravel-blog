@@ -34,7 +34,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h3 class="h3">Publish Modal</h3>
+				<h3 class="h3">Confirmation</h3>
 			</div>
 			<div class="modal-body">
 				<div class="row">
