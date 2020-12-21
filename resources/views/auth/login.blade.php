@@ -11,7 +11,7 @@
                     <form method="POST" action="{{ route('user_login') }}" aria-label="{{ __('Login') }}">
                         @csrf
                         @if(session()->has('message.level'))
-                          <div class="alert alert-{{ session('message.level') }}"> 
+                          <div class="alert alert-{{ session('message.level') }}">
                             {!! session('message.content') !!}
                           </div>
                         @endif
