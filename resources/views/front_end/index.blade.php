@@ -103,8 +103,20 @@
                                             <div class="right-content" style="background-color: #FDE8E4;">
                                                 <h4>{{$blog->title}}</h4>
                                                 <span>Branding / Admin</span>
-                                                 {!! $blog->description !!}
-                                                {{-- <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p> --}}
+                                                @php
+                                                    $total_words = str_word_count($blog->description);
+                                                    $total_chars = (substr(strip_tags($blog->description), 0, 145));
+                                                    // dd($total_chars);
+                                                    if(ends_with($total_chars,' ') || ends_with($total_chars,'.')){
+                                                    $words = str_word_count($total_chars);
+                                                    }else{
+                                                    $words = str_word_count($total_chars)-1;
+                                                    }
+
+                                                @endphp
+                                                <p>{{implode(' ', array_slice(explode(' ',strip_tags($blog->description) ), 0, $words))}} {{$total_words>$words ? '...':''}}</p>
+
+                                                 {{-- {!! $blog->description !!} --}}
                                                 <div class="text-button">
                                                     <a href="#">Continue Reading</a>
                                                 </div>

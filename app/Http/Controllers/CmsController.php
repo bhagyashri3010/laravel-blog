@@ -14,6 +14,9 @@ class CmsController extends Controller
     }
     public function addaboutus(Request $request)
     {
+        $this->validate($request, [
+			'description' => 'required'
+		]);
         $check = Cms::where('cms_type','about_us')->first();
         if(isset($check->content)){
             $check->content = $request->description;

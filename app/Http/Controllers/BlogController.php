@@ -63,7 +63,7 @@ class BlogController extends Controller
 	{
 		$this->validate($request, [
 			'title' => 'required',
-			'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+			'image' => 'required|mimes:jpeg,png,jpg,gif,svg',
 			'description' => 'required'
 		]);
 
@@ -93,7 +93,7 @@ class BlogController extends Controller
 	{
 		$this->validate($request, [
 			'title' => 'required',
-			'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
+			'image' => 'mimes:jpeg,png,jpg,gif,svg',
 			'description' => 'required'
 		]);
 

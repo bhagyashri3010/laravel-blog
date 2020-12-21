@@ -116,11 +116,10 @@ $(document).ready(function() {
 
 	$('#add-blog-form').validate({
 		ignore: [],
-		debug: true,
+		debug: false,
 		errorClass: 'form-error',
 		rules: {
 			title: "required",
-			category_id: "required",
 			description: {
 				required: function()
 				{
@@ -135,7 +134,6 @@ $(document).ready(function() {
 		},
 		messages: {
 			title: "Please enter title",
-			category_id: "Please select category",
 			description: "Please enter description",
 			image: {
 				required: "Please select image",

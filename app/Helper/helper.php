@@ -16,7 +16,7 @@ function saveImage($file,$path){
     if(!File::isDirectory($path.'medium_img')){
         File::makeDirectory($path.'medium_img', 0777, true, true);
       }
-      $medium_img = Image::make($file)->resize(360,200);
+      $medium_img = Image::make($file)->resize(270,237);
       $medium_img->save($path.'medium_img/'.$filename);
     return($filename);
 }

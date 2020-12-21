@@ -110,14 +110,14 @@
 			<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 			  <!-- Add icons to the links using the .nav-icon class
 				   with font-awesome or any other icon font library -->
-				<li class="nav-item has-treeview menu-open">
+				{{-- <li class="nav-item has-treeview menu-open">
 					<a href="#" class="nav-link  ">
 						<i class="fa fa-home"></i>
 						<p>Dashboard</p>
 					</a>
-				</li>
+				</li> --}}
 				<li class="nav-item has-treeview menu-open">
-					<a href="{{ url('blogs') }}" class="nav-link {{ in_array(Request::path(), array('blogs','create-blog', 'show-blog')) ? 'active' : ''}}">
+					<a href="{{ url('blogs') }}" class="nav-link {{ in_array(Request::path(), array('blogs','create-blog', 'show-blog/*')) || Request::is('show-blog/*')? 'active' : ''}}">
 						<i class="fa fa-clipboard"></i>
 						<p>Blogs</p>
 					</a>
