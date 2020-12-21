@@ -49,10 +49,17 @@
 				/* background: transparent; */
 				border: 0;
 				display: block;
-				width: 100%;
+				width: 300px;
 				padding: 1rem;
 				height: 100%;
 				font-size: 12px;
+			}
+            .search-bar  {
+				height: 40px;
+                display: inline-block;
+			}
+            .search-icon  {
+                display: inline-block;
 			}
 		</style>
 	</head>

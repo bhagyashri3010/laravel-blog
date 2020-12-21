@@ -195,10 +195,10 @@
                                                 <div class="">
                                                     <div class="col-12">
                                                         <div class="row no-gutters">
-                                                            <div class="col-md-10" style="height: 40px;">
+                                                            <div class="col-md-10 search-bar"  style="height: 40px;">
                                                                 <input type="text" placeholder="Search..." class="form-control" id="search" name="search">
                                                             </div>
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-2 search-icon">
                                                                 <button type="submit" class="btn btn-base" style="margin-left: -20px;">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                                                                 </button>
