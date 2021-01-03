@@ -117,17 +117,17 @@
 					</a>
 				</li> --}}
 				<li class="nav-item has-treeview menu-open">
-					<a href="{{ url('blogs') }}" class="nav-link {{ in_array(Request::path(), array('blogs','create-blog', 'show-blog/*')) || Request::is('show-blog/*')? 'active' : ''}}">
+					<a href="{{ url('blogs') }}" class="nav-link {{ in_array(Request::path(), array('blogs','create-blog')) || Request::is('show-blog/*')? 'active' : ''}}">
 						<i class="fa fa-clipboard"></i>
 						<p>Blogs</p>
 					</a>
 				</li>
-				<!-- <li class="nav-item has-treeview menu-open">
+				 <li class="nav-item has-treeview menu-open">
 					<a href="{{ route('categories.index') }}" class="nav-link {{ Request::path() == "categories" ? 'active':''}}">
 					<i class="fa fa-list"></i>
 						<p>Categories</p>
 					</a>
-				</li> -->
+				</li>
 				<li class="nav-item has-treeview menu-open">
 					<a href="{{ route('about-index') }}" class="nav-link {{ Request::path() == 'about_us' ? 'active': ''}}">
 					<i class="fa fa-history"></i>

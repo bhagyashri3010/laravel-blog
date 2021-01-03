@@ -48,18 +48,18 @@
 											@if ($errors->has('title')) <p style="color:red;">{{ $errors->first('title') }}</p> @endif
 										</div>
 									</div>
-									<!-- <div class="col-sm-6">
+									 <div class="col-sm-6">
 										<div class="form-group">
 											<label>Category</label><span class="text-danger"> *</span>
-											<select name="category_id" class="form-control select2" style="width: 100%;">
+											<select name="category_id" class="form-control" style="width: 100%;">
 												<option value="">Please select category</option>
-												@foreach($categories as $category)
-													<option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+												@foreach($categories as $key=>$category)
+													<option value="{{ $key }}">{{ $category }}</option>
 												@endforeach
 											</select>
 											@if($errors->has('category_id')) <p style="color: red">{{  $errors->first('category_id') }}</p> @endif
 										</div>
-									</div> -->
+									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12">

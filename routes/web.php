@@ -49,3 +49,5 @@ Route::get('category_data', 'CategoryController@category_data');
 Auth::routes();
 Route::get('/index', 'FrontendController@index');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/about-us', 'FrontendController@about_us');
+Route::get('/Blog_category/{id}', 'FrontendController@category_listing');

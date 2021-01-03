@@ -16,7 +16,7 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="service-item">
-                                            <h4>"Here Quote will come"</h4>
+                                            <h4>About Us</h4>
                                             </a>
                                         </div>
                                     </div>
@@ -27,83 +27,7 @@
                         <section class="our-blog" style="background-color: #FDE8E4; padding-top: 0;">
                             <div>
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="heading">
-                                            <h2 style="margin-bottom: 30px;">Our blog post</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- <div class="row">
-                                    @foreach($blogs as $blog)
-                                        <div class="col-md-12">
-                                            <div class="blog-post">
-                                                <div class="col-md-6">
-                                                    <img src="{{asset('uploads/blog_image/medium_img/'.$blog->image)}}" style="" alt="">
-                                                    <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
-                                                        {{ date("d", strtotime($blog->created_at)) }} <br> {{ date("M", strtotime($blog->created_at)) }}</div>
-                                                </div>
-                                                <div class="right-content" style="background-color: #FDE8E4;">
-                                                    <h4>{{ $blog->title }}</h4>
-                                                    <span>Branding / Admin</span>
-                                                    <p>{!! $blog->description !!}</p>
-                                                    <div class="text-button">
-                                                        <a href="#">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div> --}}
-                                <div class="row">
-                                    @foreach($blogs as $blog)
-                                    <div class="col-md-12">
-                                        <div class="blog-post">
-                                            <div class="col-md-6">
-                                                <img src="{{asset('uploads/blog_image/medium_img/'.$blog->image)}}" style="width: 100%;" alt="">
-                                                <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
-                                                    {{ date("d", strtotime($blog->created_at)) }} <br> {{ date("M", strtotime($blog->created_at)) }}</div>
-                                            </div>
-                                            <div class="right-content" style="background-color: #FDE8E4;">
-                                                <h4>{{$blog->title}}</h4>
-                                                <span>Branding / Admin</span>
-                                                @php
-                                                    $total_words = str_word_count($blog->description);
-                                                    $total_chars = (substr(strip_tags($blog->description), 0, 145));
-                                                    // dd($total_chars);
-                                                    if(ends_with($total_chars,' ') || ends_with($total_chars,'.')){
-                                                    $words = str_word_count($total_chars);
-                                                    }else{
-                                                    $words = str_word_count($total_chars)-1;
-                                                    }
-
-                                                @endphp
-                                                <p>{{implode(' ', array_slice(explode(' ',strip_tags($blog->description) ), 0, $words))}} {{$total_words>$words ? '...':''}}</p>
-
-                                                 {{-- {!! $blog->description !!} --}}
-                                                <div class="text-button">
-                                                    <a href="#">Continue Reading</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                    {{-- <div class="col-md-12">
-                                        <div class="blog-post">
-                                            <div class="col-md-6">
-                                                <img src="{{asset('front/img/blog_post_01.jpg')}}" style="width: 100%;" alt="">
-                                                <div class="date" style="right: 15px;left: inherit; font-weight: bold; text-align: center;">
-                                                    26 <br> Oct</div>
-                                            </div>
-                                            <div class="right-content" style="background-color: #FDE8E4;">
-                                                <h4>Stumptown Tofu Schlitz</h4>
-                                                <span>Branding / Admin</span>
-                                                <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
-                                                <div class="text-button">
-                                                    <a href="#">Continue Reading</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> --}}
+                                   {!! $view->content !!}
                                 </div>
                             </div>
                         </section>

@@ -55,7 +55,7 @@ class BlogController extends Controller
 
 	public function show_create()
 	{
-		$categories = Category::all()->toArray();
+        $categories = config('app.category');
 		return view('blogs.add', ['categories' => $categories]);
 	}
 
@@ -85,7 +85,7 @@ class BlogController extends Controller
 	public function show_edit($id)
 	{
 		$blog = Blog::find($id);
-		$categories = Category::all()->toArray();
+        $categories = config('app.category');
 		return view('blogs.edit', ['categories' => $categories,'blog'=>$blog]);
 	}
 

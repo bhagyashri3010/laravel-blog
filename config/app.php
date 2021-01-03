@@ -108,6 +108,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'category'=>[1=>'Recipes',2=>'Writing',3=>'Lifestyle',4=>'Travel'],
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
